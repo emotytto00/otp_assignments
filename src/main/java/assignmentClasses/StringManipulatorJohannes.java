@@ -1,3 +1,5 @@
+package assignmentClasses;
+
 public class StringManipulatorJohannes {
     public String reverse(String input) {
         if (input == null) {

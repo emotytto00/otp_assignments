@@ -1,3 +1,5 @@
+package assignmentClasses;
+
 public class ArrayUtils {
 
     // Method to get a predefined single-dimensional array of integers
