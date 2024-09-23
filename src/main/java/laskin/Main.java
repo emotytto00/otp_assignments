@@ -8,26 +8,26 @@ public class Main {
         laskin.virtaON();
         System.out.println("...Virta päälle...");
 
-        laskin.lisaa(500);
-        System.out.println("Lisää 500    = " + laskin.annaTulos());
+        int tulos = laskin.lisaa(500, 500);
+        System.out.println("Lisää 500    = " + tulos);
 
-        laskin.lisaa(200);
-        System.out.println("Lisää 200    = " + laskin.annaTulos());
+        tulos = laskin.lisaa(200, 200);
+        System.out.println("Lisää 200    = " + tulos);
 
-        laskin.vahenna(100);
-        System.out.println("Vähennä 100  = " + laskin.annaTulos());
+        tulos = laskin.vahenna(100, 50);
+        System.out.println("Vähennä 100  = " + tulos);
 
-        laskin.jaa(2);
-        System.out.println("Jaa 2:lla    = " + laskin.annaTulos());
+        tulos = laskin.jaa(40, 2);
+        System.out.println("Jaa 2:lla    = " + tulos);
 
-        laskin.kerro(10);
-        System.out.println("Kerro 10:llä = " + laskin.annaTulos());
+        tulos = laskin.kerro(10, 10);
+        System.out.println("Kerro 10:llä = " + tulos);
 
         System.out.println("...Nollataan...");
         laskin.nollaa();
 
-        laskin.lisaa(500);
-        System.out.println("Lisää 500    = " + laskin.annaTulos());
+        tulos = laskin.lisaa(500, 0);
+        System.out.println("Lisää 500    = " + tulos);
 
         laskin.virtaOFF();
         System.out.println("...Katkaistaan virta...");

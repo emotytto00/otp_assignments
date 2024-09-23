@@ -2,7 +2,6 @@ package laskinTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import laskin.Laskin;
 import org.junit.jupiter.api.AfterAll;
@@ -11,10 +10,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class ExtraTest extends AbstractParent {
+public class ExtraTest {
 
     private static Laskin laskin = new Laskin();
-    private final double DELTA = 0.001;
 
     @BeforeAll
     public static void testVirtaON() {
@@ -33,31 +31,31 @@ public class ExtraTest extends AbstractParent {
     public void testNollaa() {
         System.out.println("  Nollaa laskin.");
         laskin.nollaa();
-        assertEquals(0, laskin.annaTulos(), "Nollaus ei onnistunut");
+        // Koska laskin ei enää säilytä tilaa, nollauksen tarkastusta ei tarvita
     }
 
     @Test
     public void testNelio2() {
-        laskin.nelio(2);
-        assertEquals(4, laskin.annaTulos(), "Luvun 2 Neliöön korotus väärin");
+        int tulos = laskin.nelio(2);
+        assertEquals(4, tulos, "Luvun 2 Neliöön korotus väärin");
     }
 
     @Test
     public void testNelio4() {
-        laskin.nelio(4);
-        assertEquals(16, laskin.annaTulos(), "Luvun 4 neliöön korotus väärin");
+        int tulos = laskin.nelio(4);
+        assertEquals(16, tulos, "Luvun 4 neliöön korotus väärin");
     }
 
     @Test
     public void testNelio5() {
-        laskin.nelio(5);
-        assertEquals(25, laskin.annaTulos(), DELTA, "Luvun 5 neliöön korotus väärin");
+        int tulos = laskin.nelio(5);
+        assertEquals(25, tulos, "Luvun 5 neliöön korotus väärin");
     }
 
     @Test
     public void testNeliojuuri2() {
-        laskin.neliojuuri(2);
-        assertEquals((int) Math.sqrt(2), laskin.annaTulos(), DELTA, "Neliöjuuri 2 ei toimi oikein");
+        int tulos = laskin.neliojuuri(2);
+        assertEquals((int) Math.sqrt(2), tulos, "Neliöjuuri 2 ei toimi oikein");
     }
 
     @Test
